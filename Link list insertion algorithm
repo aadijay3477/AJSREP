@@ -1,0 +1,30 @@
+normal algorithm to store data in a linked list
+
+first create
+struct node{int data; node *next}
+
+create head node (with null value ofcourse)
+
+node * insert()
+{
+create two temporary null nodes
+nod * t1
+node *t2
+
+create memory for t1
+store data part 
+initialize t1.next =NULL
+
+if block:
+head ==null
+if true head=temp;
+
+else block:
+{
+initialize t2=head
+while(t2->next!=NULL)  // will check for element till node is linked with another 
+t2=t2.next;                         //node eg- 1->2->3->4->NULL it will iterate till 3 and then to 4 in next line
+ t2->next=t1;                   // will add new temp1 node which is say 7->NULL for eg and will add after 4.
+}
+}
+return head;
