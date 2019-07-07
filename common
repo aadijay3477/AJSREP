@@ -1,0 +1,27 @@
+struct slist_el {
+    struct slist_el *next;
+};
+
+struct slist_head {
+    struct slist_el *first;
+};
+
+void
+slist_insert_head(struct slist_head *head, struct slist_el *el)
+{
+    el->next = head->first;
+    head->first = el;
+}
+
+struct slist_el
+slist_pop_head(struct slist_head *head)
+{
+    struct slist_el *el;
+
+    if (head->first == NULL)
+        return NULL;
+
+    el = head->first;
+    head->first = el->next;
+    return (el);   
+}
