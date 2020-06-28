@@ -1,2 +1,3 @@
 # AJSREP
-for public testcodes
+## for personal testcodes
+### :)
